@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Brainfuck</string>
+    <string-array name="examples">
+        <item>Choose an example</item>
+        <item>Hello World</item>
+        <item>Factorial</item>
+        <item>Hanoi</item>
+        <item>Mandelbrot</item>
+    </string-array>
+</resources>

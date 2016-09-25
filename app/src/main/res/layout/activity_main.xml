@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                tools:context="br.newm.paker.brainfuck.MainActivity">
+
+    <com.mobidevelop.spl.widget.SplitPaneLayout xmlns:spl="http://schemas.android.com/apk/res-auto"
+                                                android:layout_width="fill_parent"
+                                                android:layout_height="fill_parent"
+                                                spl:orientation="vertical"
+                                                spl:splitterBackground="@drawable/splitter_bg_v"
+                                                spl:splitterPosition="50%"
+                                                spl:splitterSize="12dip">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/code_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:hint="Brainfuck"
+                    android:textSize="12sp"
+                    android:maxLength="100000"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/exampleSpn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:entries="@array/examples"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/executeBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Execute"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black">
+
+            <TextView
+                android:id="@+id/outputView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:textSize="12sp"
+                android:textColor="@android:color/holo_green_dark"/>
+        </ScrollView>
+    </com.mobidevelop.spl.widget.SplitPaneLayout>
+
+</RelativeLayout>
