@@ -1,7 +1,7 @@
 #include <jni.h>
 #include <string>
 #include <thread>
-#include "Utils.h"
+#include <sstream>
 
 using namespace std;
 
